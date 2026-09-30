@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Results</title>
+</head>
+
+<body>
+
+    <h1>Student Results</h1>
+
+    <h2>Summary</h2>
+
+    <p>Class Average: {{ class_average }}</p>
+
+    <p>Top Performer: {{ top_performer }}</p>
+
+    <p>Pass Percentage: {{ pass_percentage }}%</p>
+
+
+    <h2>Full Results</h2>
+
+    <table border="1">
+
+        <tr>
+            <th>Name</th>
+            <th>Python</th>
+            <th>Java</th>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>Total</th>
+            <th>Average</th>
+            <th>Grade</th>
+        </tr>
+
+        {% for student in students %}
+
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.python }}</td>
+            <td>{{ student.java }}</td>
+            <td>{{ student.html }}</td>
+            <td>{{ student.css }}</td>
+            <td>{{ student.Total }}</td>
+            <td>{{ student.Average }}</td>
+            <td>{{ student.Grade }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>
